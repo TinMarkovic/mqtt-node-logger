@@ -1,0 +1,17 @@
+{
+  "name": "mqtt-node-api",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TinMarkovic/mqtt-node-api.git"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "ExtensionEngine",
+  "license": "MIT",
+  "dependencies": {
+    "mqtt": "~2.1.3",
+    "winston": "~2.3.0"
+  }
+}
