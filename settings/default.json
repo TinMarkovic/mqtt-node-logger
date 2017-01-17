@@ -1,0 +1,14 @@
+{
+    "database" : {
+        "enabled" : false,
+        "host" : "localhost",
+        "user" : "root",
+        "password" : "123456",
+        "database" : "default"
+    },
+    "broker" : {
+        "host" : "oidc.tex.extensionengine.com",
+        "port" : "1883"
+    },
+    "logDir" : "/tmp/logs"
+}
