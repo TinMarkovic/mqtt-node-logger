@@ -4,20 +4,14 @@ var mysql = require('mysql');
 
 var settings = require('./settings/index'); 
 
-if(settings.database.enabled) {
-  var connection = mysql.createConnection({
-    host     : settings.database.host,
-    port     : settings.database.port,
-    user     : settings.database.user,
-    password : settings.database.password,
-    database : settings.database.database
-  });
+if(settings.database_enabled) {
+  var connection = mysql.createConnection(settings.database);
 
   connection.connect();
 }
 
 var topics = {};
-var client = mqtt.connect("mqtt://" + settings.broker.host + ":" + settings.broker.port);
+var client = mqtt.connect(settings.broker.host);
 
 var meta = new (winston.Logger)({
       transports: [ new (winston.transports.File)({ filename: settings.logDir + "app.metalog", json: false})]
@@ -40,7 +34,7 @@ client.on('message', function(topic, message) {
 
   topics[topic].info(String(message));
 
-  if(settings.database.enabled) logToDatabase(topic, String(message));
+  if(settings.database_enabled) logToDatabase(topic, String(message));
 });
 
 client.on('error', function (err) {
