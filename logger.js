@@ -11,7 +11,7 @@ if(settings.database_enabled) {
 }
 
 var topics = {};
-var client = mqtt.connect(settings.broker.host);
+var client = mqtt.connect(settings.broker);
 
 var meta = new (winston.Logger)({
       transports: [ new (winston.transports.File)({ filename: settings.logDir + "app.metalog", json: false})]
