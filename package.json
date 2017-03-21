@@ -1,9 +1,9 @@
 {
-  "name": "mqtt-node-api",
-  "main": "server.js",
+  "name": "txoc-rest-api",
+  "main": "logger.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TinMarkovic/mqtt-node-api.git"
+    "url": ""
   },
   "scripts": {
     "start": "node server.js"
@@ -11,9 +11,9 @@
   "author": "ExtensionEngine",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.17.4",
+    "lodash": "~4.17.4",
     "mqtt": "~2.1.3",
-    "mysql": "^2.12.0",
+    "mysql": "~2.12.0",
     "winston": "~2.3.0"
   }
 }

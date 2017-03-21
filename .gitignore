@@ -25,4 +25,7 @@ build/Release
 node_modules
 
 # Local settings
-mqtt-node-logger.settings.json
+settings/txoc-logger.settings.json
+
+# IDE
+.idea
